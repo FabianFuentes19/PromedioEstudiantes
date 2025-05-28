@@ -38,5 +38,17 @@ public class Estudiante {
             System.out.println("Índice de nota fuera de rango");
      }
     }
+ public double calcularPromedio() {
+        double suma = 0;
+        for (int i = 0; i < notas.length; i++) {
+        suma += notas[i];
+
+        }
+        return suma / notas.length;
+    }
+
+    public boolean aprobado() {
+        return calcularPromedio() >= 70;
+    }
 
 }

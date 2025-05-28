@@ -29,7 +29,7 @@ public class App {
     public static void mostrarInfo(Estudiante e) {
         System.out.println("Nombre: " + e.getNombre());
         System.out.println("Promedio: " + e.calcularPromedio());
-        System.out.println("Aprobado o desaporbado: " + (e.aprobado() ? "Si" : "No"));
+        System.out.println("Aprobado o reprobado: " + (e.aprobado() ? "aprobado" : "reprobado"));
         System.out.println("-------------------------");
     }
 }

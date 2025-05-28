@@ -46,7 +46,6 @@ public class Estudiante {
         }
         return suma / notas.length;
     }
-
     public boolean aprobado() {
         return calcularPromedio() >= 70;
     }

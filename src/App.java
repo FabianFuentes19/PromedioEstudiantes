@@ -10,19 +10,26 @@ public class App {
             System.out.print("Ingrese el nombre del estudiante " + i + ": ");
             e.setNombre(sc.nextLine());
 
-            System.out.print("Ingrese la matrícula del estudiante " + i + ": ");
+            System.out.print("Ingrese la matricula del estudiante " + i + ": ");
             e.setMatricula(sc.nextLine());
 
             for (int j = 0; j < 5; j++) {
-                System.out.print("Ingrese la calificación " + (j + 1) + ": ");
+                System.out.print("Ingrese la calificacion " + (j + 1) + ": ");
                 double nota = sc.nextDouble();
                 e.setNota(j, nota);
             }
             sc.nextLine(); 
 
+            mostrarInfo(e);
+
         }
 
         sc.close();
     }
-
+    public static void mostrarInfo(Estudiante e) {
+        System.out.println("Nombre: " + e.getNombre());
+        System.out.println("Promedio: " + e.calcularPromedio());
+        System.out.println("Aprobado o desaporbado: " + (e.aprobado() ? "Si" : "No"));
+        System.out.println("-------------------------");
+    }
 }
